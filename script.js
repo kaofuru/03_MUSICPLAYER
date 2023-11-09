@@ -1,5 +1,21 @@
 console.log("Welcome to Spotify");
 
+
+
+const toggleBtn = document.querySelector(".toggle_btn");
+const toggleBtnIcon = document.querySelector(".toggle_btn i");
+const dropDownMenu = document.querySelector(".dropdown_menu");
+
+toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle("open")
+    const isOpen = dropDownMenu.classList.contains("open")
+
+    toggleBtnIcon.classList = isOpen
+        ? "fa-solid fa-xmark"
+        : "fa-solid fa-bars"
+}
+
+
 // Initialize the Variables
 let songIndex = 0;
 let audioElement = new Audio('songs/1.mp3');
